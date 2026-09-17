@@ -1,0 +1,772 @@
+<!DOCTYPE html><html class="scroll-smooth antialiased bg-[#06090D] text-slate-300" lang="pt-BR" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Flux Software — Minimalismo Arquitetural &amp; Automação Inteligente</title>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="assets/css2-e0f83fc5329e2c46c5b3185e24fdb9cd" rel="stylesheet">
+<link href="assets/css2-509e1f8cfd2b4e353e7074bd8f72bd3a" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            noir: {
+              DEFAULT: '#06090D',
+              surface: '#0B1017',
+              elevated: '#111823',
+              border: '#182230',
+              borderSubtle: '#141c27',
+              line: '#1e2c3d'
+            },
+            emerald: {
+              DEFAULT: '#059669',
+              hover: '#047857',
+              dark: '#064e3b',
+              accent: '#10b981',
+              subtle: '#065f46',
+              muted: 'rgba(5, 150, 105, 0.15)'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'Fira Code', 'monospace']
+          }
+        }
+      }
+    };
+  </script>
+<style>
+    ::selection { background: #059669; color: #FFFFFF; }
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: #06090D; }
+    ::-webkit-scrollbar-thumb { background: #182230; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #059669; }
+    .grid-fine {
+      background-image: linear-gradient(to right, rgba(24, 34, 48, 0.4) 1px, transparent 1px),
+                        linear-gradient(to bottom, rgba(24, 34, 48, 0.4) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+  </style>
+</head>
+<body class="bg-[#06090D] text-slate-300 min-h-screen font-sans selection:bg-emerald-600 selection:text-white" data-mode="connect">
+<!-- Header Fixo Editorial -->
+<header class="fixed top-0 left-0 right-0 z-50 w-full bg-[#070b10]/95 backdrop-blur-md border-b border-white/10">
+<div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+<a class="flex items-center gap-3 focus:outline-none flex-shrink-0" href="#">
+<img alt="Flux Software" class="h-7 w-auto object-contain block" src="assets/AEtjO1V6IPKcLnVLU86vDiRrOukZBwIK5_cMCDjMrTEK4VFoRa29OuO0bCBvr6_BL_0RafncQt9Yg_45r48eRQH9YrKpGKP6xZuI-5445f1c657855acbf3902bdb78f20b20">
+</a>
+<nav class="hidden md:flex items-center gap-8 text-[13px] font-mono tracking-wide text-slate-400"><a class="hover:text-white transition-colors" href="#como-funciona">01. COMO FUNCIONA</a><a class="hover:text-white transition-colors" href="#solucoes">02. SOLUÇÕES</a><a class="hover:text-white transition-colors" href="#resultados">03. RESULTADOS</a></nav>
+<div class="flex items-center gap-4">
+<a class="inline-flex items-center gap-1.5 sm:gap-2 text-xs sm:text-[13px] font-semibold text-white bg-[#059669] hover:bg-[#047857] px-3 py-2 sm:px-4 sm:py-2 rounded-md transition-all duration-200 shadow-sm border border-emerald-500/20 flex-shrink-0 whitespace-nowrap" href="#conversao"><span class="hidden sm:inline">QUERO AUTOMATIZAR MINHA EMPRESA</span><span class="inline sm:hidden">AUTOMATIZAR AGORA</span><span class="material-symbols-outlined text-[15px] sm:text-[16px]">arrow_forward</span></a>
+</div>
+</div>
+</header>
+<main class="pt-24 md:pt-32">
+<!-- Hero: Minimalismo Arquitetural & Tipografia Bold Editorial -->
+<section class="relative border-b border-[#182230] pb-20 pt-8 md:pt-14 grid-fine">
+<div class="max-w-7xl mx-auto px-6">
+<!-- Status Pill Editorial -->
+<div class="inline-flex items-center gap-2.5 px-3 py-1 rounded-sm bg-[#0B1017] border border-[#182230] text-[12px] font-mono text-emerald-400 mb-8"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+<span class="tracking-widest uppercase">Tecnologia para empresas que querem crescer</span></div>
+<!-- Headline de Alto Impacto Editorial -->
+<div class="max-w-5xl">
+<h1 class="font-display font-black text-[42px] sm:text-[64px] lg:text-[80px] tracking-[-0.035em] text-white leading-[1.02] uppercase mb-6">Automatize&nbsp; processos<br>
+<span class="text-slate-500">Escale</span>&nbsp; sua&nbsp; empresa.</h1>
+<p class="text-slate-400 text-lg sm:text-xl font-normal max-w-2xl leading-relaxed mb-10">Transformamos processos manuais em operações mais rápidas, organizadas e eficientes, usando tecnologia sob medida para a realidade da sua empresa.</p>
+</div>
+<!-- Barra de Busca / Diagnóstico de Esteira Direto no Hero -->
+<div class="max-w-3xl mb-14 w-full" id="flux-diagnostico"><div class="bg-[#0B1017] border border-[#182230] hover:border-emerald-500/40 rounded-xl p-5 md:p-6 shadow-2xl transition-all duration-300 relative overflow-hidden">
+  <!-- Header da Ferramenta -->
+  <div class="flex items-center justify-between gap-4 mb-3">
+    <div class="flex items-center gap-2">
+      <span class="relative flex h-2 w-2">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
+      </span>
+      <span class="text-[11px] font-mono tracking-wider uppercase text-emerald-400 font-semibold">Diagnóstico de Automação &amp; Escala</span>
+    </div>
+    <div class="text-[11px] font-mono text-slate-400 font-semibold" id="flux-step-counter">01 / 03</div>
+  </div>
+
+  <!-- Barra de Progresso Interativa -->
+  <div class="h-1.5 bg-[#141c27] rounded-full overflow-hidden mb-5">
+    <div class="bg-[#059669] h-full transition-all duration-500 ease-out" id="flux-progress-bar" style="width: 33%;"></div>
+  </div>
+
+  <!-- ETAPA 1: Processo -->
+  <div class="space-y-4 transition-all duration-300" id="flux-diag-step-1">
+    <div>
+      <span class="text-[10px] font-mono uppercase tracking-widest text-slate-500 block mb-1">Passo 1</span>
+      <p class="text-sm sm:text-base font-semibold text-white tracking-tight font-display">Qual processo mais consome seu tempo e equipe hoje?</p>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
+      <button class="diag-step1-btn py-3 px-3 rounded-lg bg-[#06090D] border border-[#182230] text-xs font-semibold tracking-wider text-slate-300 hover:text-white hover:border-emerald-500/60 hover:bg-[#0f1722] hover:shadow-lg transition-all duration-200 cursor-pointer text-center font-mono flex flex-col items-center justify-center gap-1.5 group" data-process="Atendimento" type="button">
+        <span class="material-symbols-outlined text-[18px] text-emerald-400 group-hover:scale-110 transition-transform">support_agent</span>
+        <span class="">ATENDIMENTO</span>
+      </button>
+      <button class="diag-step1-btn py-3 px-3 rounded-lg bg-[#06090D] border border-[#182230] text-xs font-semibold tracking-wider text-slate-300 hover:text-white hover:border-emerald-500/60 hover:bg-[#0f1722] hover:shadow-lg transition-all duration-200 cursor-pointer text-center font-mono flex flex-col items-center justify-center gap-1.5 group" data-process="Vendas" type="button">
+        <span class="material-symbols-outlined text-[18px] text-emerald-400 group-hover:scale-110 transition-transform">trending_up</span>
+        <span class="">VENDAS</span>
+      </button>
+      <button class="diag-step1-btn py-3 px-3 rounded-lg bg-[#06090D] border border-[#182230] text-xs font-semibold tracking-wider text-slate-300 hover:text-white hover:border-emerald-500/60 hover:bg-[#0f1722] hover:shadow-lg transition-all duration-200 cursor-pointer text-center font-mono flex flex-col items-center justify-center gap-1.5 group" data-process="Financeiro" type="button">
+        <span class="material-symbols-outlined text-[18px] text-emerald-400 group-hover:scale-110 transition-transform">account_balance_wallet</span>
+        <span class="">FINANCEIRO</span>
+      </button>
+      <button class="diag-step1-btn py-3 px-3 rounded-lg bg-[#06090D] border border-[#182230] text-xs font-semibold tracking-wider text-slate-300 hover:text-white hover:border-emerald-500/60 hover:bg-[#0f1722] hover:shadow-lg transition-all duration-200 cursor-pointer text-center font-mono flex flex-col items-center justify-center gap-1.5 group" data-process="Operação" type="button">
+        <span class="material-symbols-outlined text-[18px] text-emerald-400 group-hover:scale-110 transition-transform">sync</span>
+        <span class="">OPERAÇÃO</span>
+      </button>
+    </div>
+    <div class="text-[11px] text-slate-500 pt-1 text-center font-mono flex items-center justify-center gap-1.5">
+      <span class="w-1 h-1 rounded-full bg-emerald-500/60"></span>
+      <span class="">Diagnóstico inicial gratuito • leva menos de 30 segundos</span>
+    </div>
+  </div>
+
+  <!-- ETAPA 2: Nível de trabalho manual -->
+  <div class="hidden space-y-4 transition-all duration-300" id="flux-diag-step-2">
+    <div class="flex items-center justify-between">
+      <div>
+        <span class="text-[10px] font-mono uppercase tracking-widest text-slate-500 block mb-1">Passo 2</span>
+        <p class="text-sm sm:text-base font-semibold text-white tracking-tight font-display" id="flux-step2-title">Quanto desse processo ainda depende de trabalho manual?</p>
+      </div>
+      <button class="text-xs font-mono text-slate-400 hover:text-emerald-400 transition-colors flex items-center gap-1 py-1 px-2 rounded hover:bg-[#141c27] cursor-pointer" id="flux-back-step1" type="button">
+        <span class="material-symbols-outlined text-[14px]">arrow_back</span> Voltar
+      </button>
+    </div>
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-2.5 pt-1">
+      <button class="diag-step2-btn py-3 px-3 rounded-lg bg-[#06090D] border border-[#182230] text-xs font-semibold tracking-wider text-slate-300 hover:text-white hover:border-emerald-500/60 hover:bg-[#0f1722] hover:shadow-lg transition-all duration-200 cursor-pointer text-center font-mono flex flex-col items-center justify-center gap-1 group" data-intensity="Pouco" type="button">
+        <span class="text-[10px] text-slate-500 group-hover:text-emerald-400 font-mono">~25%</span>
+        <span class="">POUCO</span>
+      </button>
+      <button class="diag-step2-btn py-3 px-3 rounded-lg bg-[#06090D] border border-[#182230] text-xs font-semibold tracking-wider text-slate-300 hover:text-white hover:border-emerald-500/60 hover:bg-[#0f1722] hover:shadow-lg transition-all duration-200 cursor-pointer text-center font-mono flex flex-col items-center justify-center gap-1 group" data-intensity="Parcial" type="button">
+        <span class="text-[10px] text-slate-500 group-hover:text-emerald-400 font-mono">~50%</span>
+        <span class="">PARCIAL</span>
+      </button>
+      <button class="diag-step2-btn py-3 px-3 rounded-lg bg-[#06090D] border border-[#182230] text-xs font-semibold tracking-wider text-slate-300 hover:text-white hover:border-emerald-500/60 hover:bg-[#0f1722] hover:shadow-lg transition-all duration-200 cursor-pointer text-center font-mono flex flex-col items-center justify-center gap-1 group" data-intensity="Muito" type="button">
+        <span class="text-[10px] text-slate-500 group-hover:text-emerald-400 font-mono">~75%</span>
+        <span class="">MUITO</span>
+      </button>
+      <button class="diag-step2-btn py-3 px-3 rounded-lg bg-[#06090D] border border-[#182230] text-xs font-semibold tracking-wider text-slate-300 hover:text-white hover:border-emerald-500/60 hover:bg-[#0f1722] hover:shadow-lg transition-all duration-200 cursor-pointer text-center font-mono flex flex-col items-center justify-center gap-1 group" data-intensity="Quase tudo" type="button">
+        <span class="text-[10px] text-slate-500 group-hover:text-emerald-400 font-mono">90%+</span>
+        <span class="">QUASE TUDO</span>
+      </button>
+    </div>
+    <div class="text-[11px] text-slate-500 pt-1 text-center font-mono">
+      Selecione a intensidade para calibrar a projeção de retorno
+    </div>
+  </div>
+
+  <!-- ETAPA 3: Diagnóstico Final Persuasivo -->
+  <div class="hidden space-y-4 transition-all duration-300" id="flux-diag-step-3">
+    <!-- Badge e Resumo Superior -->
+    <div class="flex flex-wrap items-center justify-between gap-2 border-b border-[#182230] pb-3">
+      <span class="text-[11px] font-mono font-semibold text-emerald-400 bg-emerald-500/10 border border-emerald-500/30 px-3 py-1 rounded-full inline-flex items-center gap-1.5">
+        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        DIAGNÓSTICO CONCLUÍDO • ALTO POTENCIAL DE ESCALA
+      </span>
+      <span class="text-[11px] font-mono text-slate-400 bg-[#06090D] px-2.5 py-1 rounded border border-[#182230]" id="flux-diag-selection-badge">Atendimento • Quase tudo manual</span>
+    </div>
+
+    <!-- Headline e Diagnóstico Persuasivo -->
+    <div class="space-y-2">
+      <h4 class="text-base sm:text-lg font-bold text-white font-display leading-snug" id="flux-diag-title">
+        Gargalo Crítico Identificado no Atendimento Comercial
+      </h4>
+      <p class="text-xs sm:text-[13px] text-slate-300 leading-relaxed font-sans" id="flux-diag-desc">
+        Sua equipe está presa em triagens repetitivas enquanto clientes quentes esfriam esperando resposta. Com a automação da Flux, você implementa qualificação e atendimento 24/7 sem contratar mais atendentes.
+      </p>
+    </div>
+
+    <!-- Impacto Estimado em Destaque -->
+    <div class="bg-gradient-to-r from-[#06090D] to-[#0d161d] border border-emerald-500/30 rounded-lg p-3 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="material-symbols-outlined text-emerald-400 text-[20px]">verified</span>
+        <span class="text-[11px] font-mono uppercase tracking-wider text-slate-400">Projeção de Eficiência:</span>
+      </div>
+      <span class="text-xs sm:text-sm font-bold font-mono text-emerald-400" id="flux-diag-impact">
+        Até 70% de tempo economizado • Respostas em segundos
+      </span>
+    </div>
+
+    <!-- 3 Pilares Estratégicos -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-1" id="flux-diag-pillars">
+      <div class="bg-[#06090D] border border-[#182230] p-3 rounded-lg">
+        <div class="text-[11px] font-bold text-white font-mono flex items-center gap-1.5 mb-1">
+          <span class="">⚡ Atendimento Instantâneo</span>
+        </div>
+        <div class="text-[11px] text-slate-400 leading-normal">Sem filas ou clientes sem resposta fora do horário comercial.</div>
+      </div>
+      <div class="bg-[#06090D] border border-[#182230] p-3 rounded-lg">
+        <div class="text-[11px] font-bold text-white font-mono flex items-center gap-1.5 mb-1">
+          <span class="">🎯 Qualificação Autônoma</span>
+        </div>
+        <div class="text-[11px] text-slate-400 leading-normal">Agentes filtram e passam apenas oportunidades prontas.</div>
+      </div>
+      <div class="bg-[#06090D] border border-[#182230] p-3 rounded-lg">
+        <div class="text-[11px] font-bold text-white font-mono flex items-center gap-1.5 mb-1">
+          <span class="">📈 Zero Vendas Perdidas</span>
+        </div>
+        <div class="text-[11px] text-slate-400 leading-normal">Retenção máxima de contatos gerados pelas campanhas.</div>
+      </div>
+    </div>
+
+    <!-- CTAs de Ação -->
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-3 pt-2 border-t border-[#182230]">
+      <div class="flex flex-col sm:flex-row items-center gap-2.5 w-full sm:w-auto">
+        <a class="inline-flex items-center justify-center gap-2 bg-[#059669] hover:bg-[#047857] text-white font-semibold text-xs md:text-sm py-2.5 px-6 rounded-lg transition-all duration-200 uppercase tracking-wider font-mono shadow-lg border border-emerald-500/20 w-full sm:w-auto text-center" href="#conversao">
+          <span class="">QUERO AUTOMATIZAR MINHA EMPRESA</span>
+          <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+        </a>
+        <a class="inline-flex items-center justify-center gap-2 bg-[#06090D] hover:bg-[#111823] text-slate-300 hover:text-white font-medium text-xs md:text-sm py-2.5 px-4 rounded-lg transition-all border border-[#182230] w-full sm:w-auto text-center font-mono" href="https://wa.me/5511999999999" rel="noopener" target="_blank">
+          <span class="material-symbols-outlined text-emerald-400 text-[16px]">chat</span>
+          <span class="">Falar com Especialista</span>
+        </a>
+      </div>
+      <button class="text-xs font-mono text-slate-500 hover:text-slate-300 transition-colors cursor-pointer py-1 self-center" id="flux-reset-diag" type="button">
+        ↺ Refazer diagnóstico
+      </button>
+    </div>
+  </div>
+</div>
+
+<script class="">
+(function initFluxDiag() {
+  const diagData = {
+    "Atendimento": {
+      title: "Gargalo Crítico Identificado no Atendimento Comercial",
+      desc: "Sua equipe está presa em triagens repetitivas enquanto clientes quentes esfriam esperando resposta. Com a automação da Flux, você implementa qualificação e atendimento 24/7 sem contratar mais atendentes.",
+      impact: "Até 70% de tempo economizado • Tempo de resposta reduzido para segundos",
+      pillars: [
+        { title: "⚡ Atendimento 24/7", text: "Clientes acolhidos em segundos no WhatsApp a qualquer hora do dia." },
+        { title: "🎯 Qualificação Autônoma", text: "Agente inteligente tria, agenda reuniões e nutre os leads." },
+        { title: "📈 Zero Vendas Perdidas", text: "Nenhum cliente esquecido por sobrecarga ou atraso da equipe." }
+      ]
+    },
+    "Vendas": {
+      title: "Oportunidades de Venda Perdidas por Falta de Acompanhamento",
+      desc: "Vendedores gastando horas preenchendo CRM e fazendo follow-up manual deixam negócios na mesa. A Flux automatiza a cadência comercial da prospecção ao fechamento.",
+      impact: "Mais de 3x mais contatos diários • Pipeline 100% ativo sem esquecimento",
+      pillars: [
+        { title: "🚀 Follow-up Automático", text: "Lembretes e cadências ativas sem esforço manual do vendedor." },
+        { title: "📊 CRM Atualizado", text: "Registros, status e mensagens sincronizados sem digitação manual." },
+        { title: "💰 Vendedores Focados", text: "Equipe comercial concentrada exclusivamente em negociar e fechar." }
+      ]
+    },
+    "Financeiro": {
+      title: "Risco Operacional e Horas Perdidas com Conciliação Manual",
+      desc: "Digitação de notas, conciliação bancária e cobrança manual geram retrabalho e inadimplência oculta. A Flux conecta seu banco, ERP e clientes de forma invisível.",
+      impact: "Eliminação de até 90% dos erros manuais • Cobranças e relatórios pontuais",
+      pillars: [
+        { title: "📑 Baixas e Notas Automáticas", text: "Emissão fiscal e conciliação bancária sem copiar e colar dados." },
+        { title: "🔔 Cobrança Preventiva", text: "Avisos inteligentes antes e após o vencimento pelo WhatsApp." },
+        { title: "🛡️ Zero Retrabalho", text: "Elimine o caos das planilhas paralelas com dados 100% integrados." }
+      ]
+    },
+    "Operação": {
+      title: "Sobrecarga Operacional Travando o Crescimento da Sua Empresa",
+      desc: "Sua empresa não consegue dobrar de tamanho porque sua operação atual depende de braço humano para tarefas burocráticas. A Flux constrói a esteira automatizada para você crescer sem inchar a folha.",
+      impact: "Operação escalável • Sua equipe focada em estratégia e entrega",
+      pillars: [
+        { title: "🔄 Sistemas Integrados", text: "Ferramentas e plataformas conversando em tempo real sem gargalos." },
+        { title: "⏱️ Piloto Automático", text: "Rotinas repetitivas executadas com precisão e velocidade digital." },
+        { title: "📊 Gestão Transparente", text: "Métricas de desempenho da operação claras em um painel único." }
+      ]
+    }
+  };
+
+  let selectedProcess = "Atendimento";
+  let selectedIntensity = "Muito";
+
+  const step1 = document.getElementById("flux-diag-step-1");
+  const step2 = document.getElementById("flux-diag-step-2");
+  const step3 = document.getElementById("flux-diag-step-3");
+  const counter = document.getElementById("flux-step-counter");
+  const progressBar = document.getElementById("flux-progress-bar");
+  const step2Title = document.getElementById("flux-step2-title");
+  const badgeSummary = document.getElementById("flux-diag-selection-badge");
+  const titleElem = document.getElementById("flux-diag-title");
+  const descElem = document.getElementById("flux-diag-desc");
+  const impactElem = document.getElementById("flux-diag-impact");
+  const pillarsContainer = document.getElementById("flux-diag-pillars");
+
+  function showStep(s) {
+    if (s === 1) {
+      step1.classList.remove("hidden");
+      step2.classList.add("hidden");
+      step3.classList.add("hidden");
+      counter.textContent = "01 / 03";
+      progressBar.style.width = "33%";
+    } else if (s === 2) {
+      step1.classList.add("hidden");
+      step2.classList.remove("hidden");
+      step3.classList.add("hidden");
+      counter.textContent = "02 / 03";
+      progressBar.style.width = "66%";
+      if (step2Title) {
+        step2Title.textContent = 'Quanto do seu processo de ' + selectedProcess + ' ainda depende de trabalho manual?';
+      }
+    } else if (s === 3) {
+      step1.classList.add("hidden");
+      step2.classList.add("hidden");
+      step3.classList.remove("hidden");
+      counter.textContent = "03 / 03";
+      progressBar.style.width = "100%";
+
+      const data = diagData[selectedProcess] || diagData["Atendimento"];
+      if (badgeSummary) badgeSummary.textContent = selectedProcess + ' • ' + selectedIntensity + ' manual';
+      if (titleElem) titleElem.textContent = data.title;
+      if (descElem) descElem.textContent = data.desc;
+      if (impactElem) impactElem.textContent = data.impact;
+      if (pillarsContainer && data.pillars) {
+        pillarsContainer.innerHTML = data.pillars.map(p => `
+          <div class="bg-[#06090D] border border-[#182230] p-3 rounded-lg">
+            <div class="text-[11px] font-bold text-white font-mono flex items-center gap-1.5 mb-1">
+              <span>${p.title}</span>
+            </div>
+            <div class="text-[11px] text-slate-400 leading-normal">${p.text}</div>
+          </div>
+        `).join('');
+      }
+    }
+  }
+
+  document.querySelectorAll(".diag-step1-btn").forEach(btn => {
+    btn.addEventListener("click", function() {
+      selectedProcess = this.getAttribute("data-process") || "Atendimento";
+      showStep(2);
+    });
+  });
+
+  document.querySelectorAll(".diag-step2-btn").forEach(btn => {
+    btn.addEventListener("click", function() {
+      selectedIntensity = this.getAttribute("data-intensity") || "Muito";
+      showStep(3);
+    });
+  });
+
+  const backBtn = document.getElementById("flux-back-step1");
+  if (backBtn) {
+    backBtn.addEventListener("click", () => showStep(1));
+  }
+
+  const resetBtn = document.getElementById("flux-reset-diag");
+  if (resetBtn) {
+    resetBtn.addEventListener("click", () => showStep(1));
+  }
+})();
+</script></div>
+<!-- 3 Métricas Limpas em Linha (Arquitetural) -->
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-px bg-[#182230] border border-[#182230] rounded-lg overflow-hidden"><div class="bg-[#0B1017] p-6 space-y-1">
+<div class="text-[11px] font-mono text-slate-400 uppercase tracking-widest">Processos Manuais</div>
+<div class="font-display font-black text-3xl sm:text-4xl text-white tracking-tight">MENOS</div>
+<div class="text-xs text-emerald-400 font-mono">Automação das tarefas repetitivas</div>
+</div>
+<div class="bg-[#0B1017] p-6 space-y-1">
+<div class="text-[11px] font-mono text-slate-400 uppercase tracking-widest">Produtividade</div>
+<div class="font-display font-black text-3xl sm:text-4xl text-white tracking-tight">MAIS</div>
+<div class="text-xs text-emerald-400 font-mono">Equipe focada no que realmente importa</div>
+</div>
+<div class="bg-[#0B1017] p-6 space-y-1">
+<div class="text-[11px] font-mono text-slate-400 uppercase tracking-widest">Crescimento</div>
+<div class="font-display font-black text-3xl sm:text-4xl text-white tracking-tight">ESCALA</div>
+<div class="text-xs text-emerald-400 font-mono">Tecnologia acompanhando sua empresa</div>
+</div></div>
+</div>
+</section>
+<!-- Seção de Diagrama Linear em Cascata (Esteira Contínua) -->
+<section class="py-20 border-b border-[#182230] bg-[#06090D]" id="como-funciona">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4"><div>
+<span class="text-emerald-400 font-mono text-xs uppercase tracking-widest block mb-2">// COMO A FLUX AJUDA SUA EMPRESA</span>
+<h2 class="font-display font-black text-3xl sm:text-4xl text-white uppercase tracking-tight">
+  DO TRABALHO MANUAL À AUTOMAÇÃO
+</h2>
+</div>
+<p class="text-slate-400 text-sm max-w-md font-sans">
+  Identificamos tarefas repetitivas, conectamos as ferramentas que sua empresa já utiliza e automatizamos o que pode ser feito de forma mais rápida e inteligente.
+</p></div>
+<!-- Diagrama Linear Cascata -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-4 relative"><!-- Step 1 -->
+<div class="bg-[#0B1017] border border-[#182230] p-5 rounded-lg flex flex-col justify-between relative group hover:border-emerald-500/40 transition-colors">
+<div class="space-y-3">
+<div class="flex items-center justify-between text-[11px] font-mono">
+<span class="text-emerald-400 font-bold">01. ATENDIMENTO</span>
+<span class="text-slate-500">ÁGIL</span>
+</div>
+<h3 class="font-display font-bold text-white text-base">Atenda seus clientes mais rápido</h3>
+<p class="text-xs text-slate-400 leading-relaxed">
+  Automatize respostas, triagem e encaminhamento de clientes para que sua equipe não perca oportunidades por demora no atendimento.
+</p>
+</div>
+<div class="mt-6 pt-3 border-t border-[#182230] font-mono text-[10px] text-slate-400">
+  Mais agilidade no atendimento
+</div>
+</div>
+<!-- Step 2 -->
+<div class="bg-[#0B1017] border border-[#182230] p-5 rounded-lg flex flex-col justify-between relative group hover:border-emerald-500/40 transition-colors">
+<div class="space-y-3">
+<div class="flex items-center justify-between text-[11px] font-mono">
+<span class="text-emerald-400 font-bold">02. VENDAS</span>
+<span class="text-slate-500">COMERCIAL</span>
+</div>
+<h3 class="font-display font-bold text-white text-base">Não deixe oportunidades para trás</h3>
+<p class="text-xs text-slate-400 leading-relaxed">
+  Organize e automatize o caminho entre o primeiro contato e a venda, ajudando sua equipe a acompanhar cada oportunidade no momento certo.
+</p>
+</div>
+<div class="mt-6 pt-3 border-t border-[#182230] font-mono text-[10px] text-slate-400">
+  Mais oportunidades aproveitadas
+</div>
+</div>
+<!-- Step 3 -->
+<div class="bg-[#0B1017] border border-[#182230] p-5 rounded-lg flex flex-col justify-between relative group hover:border-emerald-500/40 transition-colors">
+<div class="space-y-3">
+<div class="flex items-center justify-between text-[11px] font-mono">
+<span class="text-emerald-400 font-bold">03. OPERAÇÃO</span>
+<span class="text-slate-500">EFICIÊNCIA</span>
+</div>
+<h3 class="font-display font-bold text-white text-base">Elimine tarefas repetitivas</h3>
+<p class="text-xs text-slate-400 leading-relaxed">
+  Automatize atividades que consomem horas da sua equipe, reduza retrabalho e deixe as pessoas focadas no que realmente precisa de atenção.
+</p>
+</div>
+<div class="mt-6 pt-3 border-t border-[#182230] font-mono text-[10px] text-slate-400">
+  Mais produtividade no dia a dia
+</div>
+</div>
+<!-- Step 4 -->
+<div class="bg-[#0B1017] border border-emerald-500/30 p-5 rounded-lg flex flex-col justify-between relative group bg-gradient-to-b from-[#0B1017] to-[#0a1612]">
+<div class="space-y-3">
+<div class="flex items-center justify-between text-[11px] font-mono">
+<span class="text-emerald-400 font-bold">04. GESTÃO</span>
+<span class="text-emerald-400">CONTROLE</span>
+</div>
+<h3 class="font-display font-bold text-white text-base">Tenha mais controle da empresa</h3>
+<p class="text-xs text-slate-300 leading-relaxed">
+  Conecte informações importantes da operação e transforme processos dispersos em uma rotina mais organizada, previsível e fácil de acompanhar.
+</p>
+</div>
+<div class="mt-6 pt-3 border-t border-emerald-500/20 font-mono text-[10px] text-emerald-400">
+  Mais controle para decidir melhor
+</div>
+</div></div>
+</div>
+</section>
+<!-- Seção de Galeria de Arquitetura de Sistemas com Molduras Elegantes -->
+<section class="py-20 border-b border-[#182230] bg-[#06090D]" id="solucoes">
+<div class="max-w-7xl mx-auto px-6">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-4"><div>
+<span class="text-emerald-400 font-mono text-xs uppercase tracking-widest block mb-2">// SOLUÇÕES PARA SUA EMPRESA</span>
+<h2 class="font-display font-black text-3xl sm:text-4xl text-white uppercase tracking-tight">
+  AUTOMAÇÃO QUE ACONTECE NA PRÁTICA
+</h2>
+</div>
+<p class="text-slate-400 text-sm max-w-sm font-mono">
+  Tecnologia aplicada aos processos que fazem parte da rotina da sua empresa.
+</p></div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Card 1: Agente WhatsApp & Qualificação -->
+<div class="rounded-lg bg-[#0B1017] border border-[#182230] overflow-hidden flex flex-col justify-between shadow-2xl"><!-- Moldura Topo / Aba de Sistema -->
+<div class="bg-[#080D14] px-4 py-2.5 border-b border-[#182230] flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-[#182230]"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-[#182230]"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500/60"></span>
+<span class="font-mono text-xs text-slate-400 ml-2">atendimento_inteligente</span>
+</div>
+<span class="text-[11px] font-mono text-emerald-400 font-semibold">ATENDIMENTO INTELIGENTE</span>
+</div>
+<!-- Conteúdo Dividido -->
+<div class="p-6 grid grid-cols-1 sm:grid-cols-12 gap-6 items-center flex-grow">
+<div class="sm:col-span-6 space-y-3">
+<div class="text-[11px] font-mono text-emerald-400 uppercase tracking-widest font-semibold">Atendimento Comercial</div>
+<h3 class="font-display font-bold text-xl text-white">Seu cliente é atendido enquanto sua equipe trabalha</h3>
+<p class="text-xs text-slate-400 leading-relaxed">
+  Automatize o primeiro atendimento, responda dúvidas, filtre oportunidades e encaminhe cada cliente para a pessoa certa.
+</p>
+<div class="space-y-1.5 pt-2 font-mono text-[11px]">
+<div class="flex justify-between text-slate-400 border-b border-[#182230] pb-1">
+<span class="">Atendimento:</span>
+<span class="text-emerald-400 font-bold">Mais rápido e 24/7</span>
+</div>
+<div class="flex justify-between text-slate-400 border-b border-[#182230] pb-1">
+<span class="">Oportunidades:</span>
+<span class="text-emerald-400 font-bold">Mais clientes acompanhados</span>
+</div>
+</div>
+</div>
+<div class="sm:col-span-6 flex justify-center">
+<div class="rounded-md border border-[#182230] overflow-hidden bg-[#06090D] p-1.5 max-w-[240px]">
+<img alt="Agente de IA WhatsApp" class="w-full h-auto object-cover rounded block" src="assets/AB6AXuBdzGGkClPfkHa5nucZU-siodWpRP7yXnxR8v0-T2H1Mop863uoBRhEQkPPj-N8waqkiPuIdfic-QyxUPODGDB0tskciFsS-dd4714cd92b29a1b8e2d9df495265a51">
+</div>
+</div>
+</div>
+<!-- Footer do Card -->
+<div class="px-6 py-3 bg-[#080D14] border-t border-[#182230] flex items-center justify-between text-[11px] font-mono text-slate-400">
+<span class="">Solução sob medida para o atendimento da sua empresa</span>
+<span class="text-emerald-400">Ativo</span>
+</div></div>
+<!-- Card 2: IA Otimização de Tarefas (Cérebro) -->
+<div class="rounded-lg bg-[#0B1017] border border-[#182230] overflow-hidden flex flex-col justify-between shadow-2xl"><!-- Moldura Topo / Aba de Sistema -->
+<div class="bg-[#080D14] px-4 py-2.5 border-b border-[#182230] flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-[#182230]"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-[#182230]"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500/60"></span>
+<span class="font-mono text-xs text-slate-400 ml-2">produtividade_equipe</span>
+</div>
+<span class="text-[11px] font-mono text-emerald-400 font-semibold">PRODUTIVIDADE</span>
+</div>
+<!-- Conteúdo Dividido -->
+<div class="p-6 grid grid-cols-1 sm:grid-cols-12 gap-6 items-center flex-grow">
+<div class="sm:col-span-6 space-y-3">
+<div class="text-[11px] font-mono text-emerald-400 uppercase tracking-widest font-semibold">Rotina Operacional</div>
+<h3 class="font-display font-bold text-xl text-white">Deixe a tecnologia cuidar do trabalho repetitivo</h3>
+<p class="text-xs text-slate-400 leading-relaxed">
+  Automatize tarefas administrativas e processos internos para reduzir o trabalho operacional da sua equipe.
+</p>
+<div class="space-y-1.5 pt-2 font-mono text-[11px]">
+<div class="flex justify-between text-slate-400 border-b border-[#182230] pb-1">
+<span class="">Tarefas manuais:</span>
+<span class="text-emerald-400 font-bold">Redução significativa</span>
+</div>
+<div class="flex justify-between text-slate-400 border-b border-[#182230] pb-1">
+<span class="">Tempo da equipe:</span>
+<span class="text-white font-bold">Foco no crescimento</span>
+</div>
+</div>
+</div>
+<div class="sm:col-span-6 flex justify-center">
+<div class="rounded-md border border-[#182230] overflow-hidden bg-[#06090D] p-1.5 max-w-[240px]">
+<img alt="IA para automação de tarefas" class="w-full h-auto object-cover rounded block" src="assets/AB6AXuBCi8dYhj_ZIyzGBWFJYfMAoX0Cb96qKc43ypWK58WaaBgRxpeAjbHNFG8tbyng-2_Tf981aMg0djKTmWLUOUnnO5inSuqs-d25bb04a8b10ee6c02bed0af1ea02114">
+</div>
+</div>
+</div>
+<!-- Footer do Card -->
+<div class="px-6 py-3 bg-[#080D14] border-t border-[#182230] flex items-center justify-between text-[11px] font-mono text-slate-400">
+<span class="">Tecnologia inteligente integrada à rotina da equipe</span>
+<span class="text-emerald-400">Ativo</span>
+</div></div>
+<!-- Card 3: Robô Laptop (Descomplique Tarefas) -->
+<div class="rounded-lg bg-[#0B1017] border border-[#182230] overflow-hidden flex flex-col justify-between shadow-2xl"><!-- Moldura Topo / Aba de Sistema -->
+<div class="bg-[#080D14] px-4 py-2.5 border-b border-[#182230] flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-[#182230]"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-[#182230]"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500/60"></span>
+<span class="font-mono text-xs text-slate-400 ml-2">processos_integrados</span>
+</div>
+<span class="text-[11px] font-mono text-emerald-400 font-semibold">PROCESSOS</span>
+</div>
+<!-- Conteúdo Dividido -->
+<div class="p-6 grid grid-cols-1 sm:grid-cols-12 gap-6 items-center flex-grow">
+<div class="sm:col-span-6 space-y-3">
+<div class="text-[11px] font-mono text-emerald-400 uppercase tracking-widest font-semibold">Integração Contínua</div>
+<h3 class="font-display font-bold text-xl text-white">Faça seus sistemas trabalharem juntos</h3>
+<p class="text-xs text-slate-400 leading-relaxed">
+  Conecte as ferramentas que sua empresa já utiliza para evitar informações duplicadas, retrabalho e tarefas desnecessárias.
+</p>
+<div class="space-y-1.5 pt-2 font-mono text-[11px]">
+<div class="flex justify-between text-slate-400 border-b border-[#182230] pb-1">
+<span class="">Retrabalho:</span>
+<span class="text-emerald-400 font-bold">Eliminado na rotina</span>
+</div>
+<div class="flex justify-between text-slate-400 border-b border-[#182230] pb-1">
+<span class="">Informações:</span>
+<span class="text-white font-bold">Mais organizadas</span>
+</div>
+</div>
+</div>
+<div class="sm:col-span-6 flex justify-center">
+<div class="rounded-md border border-[#182230] overflow-hidden bg-[#06090D] p-1.5 max-w-[240px]">
+<img alt="Descomplique tarefas diárias" class="w-full h-auto object-cover rounded block" src="assets/AB6AXuAXZhL5iAR9wzGS2RRygLhU2xA5UpmbkUOujeNNH9kOawGlYV8CaIa3HXFvRfRqh1WaWA_t8nVJjPzeaZkukeqBXshdTOgg-9a76ec67d90402cc21d898ff59dc2068">
+</div>
+</div>
+</div>
+<!-- Footer do Card -->
+<div class="px-6 py-3 bg-[#080D14] border-t border-[#182230] flex items-center justify-between text-[11px] font-mono text-slate-400">
+<span class="">Integração direta entre seus sistemas atuais</span>
+<span class="text-emerald-400">Ativo</span>
+</div></div>
+<!-- Card 4: Executivo Celebrando (Não perca mais vendas) -->
+<div class="rounded-lg bg-[#0B1017] border border-[#182230] overflow-hidden flex flex-col justify-between shadow-2xl"><!-- Moldura Topo / Aba de Sistema -->
+<div class="bg-[#080D14] px-4 py-2.5 border-b border-[#182230] flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-[#182230]"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-[#182230]"></span>
+<span class="w-2.5 h-2.5 rounded-full bg-emerald-500/60"></span>
+<span class="font-mono text-xs text-slate-400 ml-2">vendas_conversao</span>
+</div>
+<span class="text-[11px] font-mono text-emerald-400 font-semibold">VENDAS</span>
+</div>
+<!-- Conteúdo Dividido -->
+<div class="p-6 grid grid-cols-1 sm:grid-cols-12 gap-6 items-center flex-grow">
+<div class="sm:col-span-6 space-y-3">
+<div class="text-[11px] font-mono text-emerald-400 uppercase tracking-widest font-semibold">Agilidade Comercial</div>
+<h3 class="font-display font-bold text-xl text-white">Transforme atendimento em oportunidades</h3>
+<p class="text-xs text-slate-400 leading-relaxed">
+  Automatize etapas do processo comercial para sua equipe responder mais rápido, acompanhar melhor os clientes e vender mais.
+</p>
+<div class="space-y-1.5 pt-2 font-mono text-[11px]">
+<div class="flex justify-between text-slate-400 border-b border-[#182230] pb-1">
+<span class="">Agilidade comercial:</span>
+<span class="text-emerald-400 font-bold">Resposta imediata</span>
+</div>
+<div class="flex justify-between text-slate-400 border-b border-[#182230] pb-1">
+<span class="">Vendas perdidas:</span>
+<span class="text-emerald-400 font-bold">Menos oportunidades perdidas</span>
+</div>
+</div>
+</div>
+<div class="sm:col-span-6 flex justify-center">
+<div class="rounded-md border border-[#182230] overflow-hidden bg-[#06090D] p-1.5 max-w-[240px]">
+<img alt="Não perca mais vendas" class="w-full h-auto object-cover rounded block" src="assets/AB6AXuBG0fz8kcZCYX1-NxHWkhUARUkOLPQThUPuoA7FPa-oN842bS327wa5ZPM1Guq0P88qqAdurqsvhBtAIzWBdqkw-tSZZKTo-8ddbba61b02b6f562fc9fb3a52d7fd1a">
+</div>
+</div>
+</div>
+<!-- Footer do Card -->
+<div class="px-6 py-3 bg-[#080D14] border-t border-[#182230] flex items-center justify-between text-[11px] font-mono text-slate-400">
+<span class="">Processo comercial mais ágil e organizado</span>
+<span class="text-emerald-400">Ativo</span>
+</div></div>
+</div>
+</div>
+</section>
+<!-- Seção de Comparativo Operacional Direto -->
+<section class="py-20 border-b border-[#182230] bg-[#06090D]" id="resultados">
+<div class="max-w-7xl mx-auto px-6">
+<div class="max-w-3xl mb-12"><span class="text-emerald-400 font-mono text-xs uppercase tracking-widest block mb-2">// O IMPACTO NA SUA OPERAÇÃO</span>
+<h2 class="font-display font-black text-3xl sm:text-4xl text-white uppercase tracking-tight">
+  QUANTO SUA EMPRESA PODE GANHAR EM EFICIÊNCIA
+</h2></div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-[#182230] border border-[#182230] rounded-lg overflow-hidden"><!-- Lado A: Processos Manuais -->
+<div class="bg-[#0B1017] p-8 space-y-6">
+<div class="flex items-center justify-between">
+<span class="font-mono text-xs text-rose-400 font-bold uppercase tracking-wider">Com Processos Manuais</span>
+<span class="text-[11px] font-mono text-slate-500">Quando sua equipe precisa fazer tudo na mão</span>
+</div>
+<div class="space-y-4 font-mono text-xs">
+<div>
+<div class="flex justify-between text-slate-400 mb-1">
+<span class="">Atendimento</span>
+<span class="text-rose-400">Clientes esperando respostas</span>
+</div>
+<div class="h-1.5 bg-[#141c27] rounded-full overflow-hidden">
+<div class="bg-rose-500 h-full w-[80%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-slate-400 mb-1">
+<span class="">Operação</span>
+<span class="text-rose-400">Equipe repetindo tarefas manuais</span>
+</div>
+<div class="h-1.5 bg-[#141c27] rounded-full overflow-hidden">
+<div class="bg-rose-500 h-full w-[70%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-slate-400 mb-1">
+<span class="">Gestão</span>
+<span class="text-rose-400">Informações espalhadas</span>
+</div>
+<div class="h-1.5 bg-[#141c27] rounded-full overflow-hidden">
+<div class="bg-rose-500 h-full w-[65%]"></div>
+</div>
+</div>
+</div>
+<p class="text-xs text-slate-400 pt-2 border-t border-[#182230]">
+  Sua equipe perde tempo com tarefas que poderiam ser automatizadas.
+</p>
+</div>
+<!-- Lado B: Com Automação -->
+<div class="bg-[#0B1017] p-8 space-y-6">
+<div class="flex items-center justify-between">
+<span class="font-mono text-xs text-emerald-400 font-bold uppercase tracking-wider">Com Automação</span>
+<span class="text-[11px] font-mono text-emerald-400">Quando a tecnologia trabalha junto com sua equipe</span>
+</div>
+<div class="space-y-4 font-mono text-xs">
+<div>
+<div class="flex justify-between text-slate-300 mb-1">
+<span class="">Atendimento</span>
+<span class="text-emerald-400 font-bold">Respostas mais rápidas</span>
+</div>
+<div class="h-1.5 bg-[#141c27] rounded-full overflow-hidden">
+<div class="bg-[#059669] h-full w-[90%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-slate-300 mb-1">
+<span class="">Operação</span>
+<span class="text-emerald-400 font-bold">Tarefas automatizadas</span>
+</div>
+<div class="h-1.5 bg-[#141c27] rounded-full overflow-hidden">
+<div class="bg-[#059669] h-full w-[88%]"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-slate-300 mb-1">
+<span class="">Gestão</span>
+<span class="text-emerald-400 font-bold">Processos mais organizados</span>
+</div>
+<div class="h-1.5 bg-[#141c27] rounded-full overflow-hidden">
+<div class="bg-[#059669] h-full w-[92%]"></div>
+</div>
+</div>
+</div>
+<p class="text-xs text-emerald-400/90 pt-2 border-t border-[#182230]">
+  Sua equipe ganha tempo para cuidar do que realmente faz a empresa crescer.
+</p>
+</div></div>
+</div>
+</section>
+<!-- Call to Action Editorial -->
+<section class="py-24 border-b border-[#182230] bg-[#06090D] relative" id="conversao">
+<div class="max-w-4xl mx-auto px-6 text-center"><div class="inline-flex items-center gap-2 px-3 py-1 rounded-sm bg-[#0B1017] border border-[#182230] text-[11px] font-mono text-emerald-400 mb-6 uppercase tracking-widest">
+<span class="">// VAMOS CONVERSAR SOBRE SUA EMPRESA</span>
+</div>
+<h2 class="font-display font-black text-4xl sm:text-5xl lg:text-6xl text-white uppercase tracking-tight leading-[1.05] mb-6">
+  Quanto tempo sua empresa ainda perde com processos manuais?
+</h2>
+<p class="text-slate-400 text-base sm:text-lg max-w-xl mx-auto mb-10 font-normal">
+  Conte para a gente onde sua empresa mais perde tempo. Vamos identificar o que pode ser automatizado e mostrar como a tecnologia pode ajudar sua operação a crescer.
+</p>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#059669] hover:bg-[#047857] text-white text-sm font-semibold px-8 py-3.5 rounded-md transition-all uppercase tracking-wider font-mono shadow-lg border border-emerald-500/20" href="https://wa.me/5511999999999" rel="noopener" target="_blank"><span class="">QUERO AUTOMATIZAR MINHA EMPRESA</span><span class="material-symbols-outlined text-[18px]">arrow_forward</span></a>
+<a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#0B1017] hover:bg-[#111823] text-slate-300 text-sm font-medium px-6 py-3.5 rounded-md border border-[#182230] transition-all font-mono" href="https://wa.me/5511999999999" rel="noopener" target="_blank">
+<span class="material-symbols-outlined text-emerald-400 text-[18px]">chat</span>
+<span class="">Falar com um Especialista</span>
+</a>
+</div>
+<div class="mt-8 font-mono text-xs text-slate-500">
+  Converse com nosso time e descubra por onde começar.
+</div></div>
+</section>
+</main>
+<!-- Footer Arquitetural Minimalista -->
+<footer class="bg-[#040608] text-slate-400 py-12">
+<div class="max-w-7xl mx-auto px-6"><div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 pb-8 border-b border-[#182230]">
+<div class="flex items-center gap-4">
+<img alt="Flux Software" class="h-6 w-auto object-contain block opacity-80" src="assets/AEtjO1V6IPKcLnVLU86vDiRrOukZBwIK5_cMCDjMrTEK4VFoRa29OuO0bCBvr6_BL_0RafncQt9Yg_45r48eRQH9YrKpGKP6xZuI-5445f1c657855acbf3902bdb78f20b20">
+<span class="text-xs font-mono text-slate-500">| Automação e tecnologia para empresas em crescimento</span>
+</div>
+<div class="flex flex-wrap items-center gap-6 font-mono text-xs text-slate-400"><a class="hover:text-white transition-colors" href="#como-funciona">Como Funciona</a><a class="hover:text-white transition-colors" href="#solucoes">Soluções</a><a class="hover:text-white transition-colors" href="#resultados">Resultados</a><a class="hover:text-white transition-colors" href="#conversao">Quero Automatizar</a><span class="text-emerald-400">@flux.software</span></div>
+</div>
+<div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] font-mono text-slate-600 gap-4">
+<div class="">© 2026 Flux Software. Blumenau, SC – Brasil.</div>
+<div class="flex items-center gap-4">
+<span class="">Automação de processos</span>
+<span class="">·</span>
+<span class="">Tecnologia sob medida</span>
+<span class="">·</span>
+<span class="">Soluções para empresas</span>
+</div>
+</div></div>
+</footer>
+
+
+</body></html>

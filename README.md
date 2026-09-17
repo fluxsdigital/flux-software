@@ -5,7 +5,6 @@ Conversão do projeto **Flux Soluções Digitais Landing Page**, criado no Googl
 ## Rotas
 
 - `/` — landing principal, navegação conectada e CTA padronizada
-- `/diagnostico` — landing com diagnóstico interativo e navbar fixa
 - `/logo-vetorial`
 - `/logo-esmeralda`
 - `/logo-solucoes-digitais`
@@ -14,7 +13,7 @@ Conversão do projeto **Flux Soluções Digitais Landing Page**, criado no Googl
 - `/logo-footer-dark`
 - `/logo-footer-dark-v2`
 
-Os artefatos HTML e assets de cada tela estão empacotados localmente em `public/stitch`. O download original, mantido fora deste repositório, está em `../source-stitch`.
+Os artefatos HTML e assets de cada tela atual estão empacotados localmente em `public/stitch`. O download original, mantido fora deste repositório, está em `../source-stitch`. Os Material Symbols usados pela landing são servidos por fonte local, sem dependência do Google Fonts.
 
 ## Execução
 

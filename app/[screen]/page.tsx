@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import { StitchScreen } from "@/components/StitchScreen";
 
 const screens = {
-  diagnostico: ["flux_software_varia_o_a_diagn_stico_interativo_navbar_fixa", "Flux Software — Diagnóstico"],
   "logo-vetorial": ["flux_software_official_vector_logo", "Logo vetorial Flux Software"],
   "logo-esmeralda": ["logo_oficial_flux_software_verde_esmeralda", "Logo esmeralda Flux Software"],
   "logo-solucoes-digitais": ["flux_solu_es_digitais_logo", "Logo Flux Soluções Digitais"],

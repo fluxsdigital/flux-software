@@ -1,5 +1,10 @@
-import { StitchScreen } from "@/components/StitchScreen";
+import { FinalCta, Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
+import { Hero } from "@/components/Hero";
+import { ProcessSection } from "@/components/ProcessSection";
+import { ResultsSection } from "@/components/ResultsSection";
+import { SolutionsSection } from "@/components/SolutionsSection";
 
 export default function Home() {
-  return <StitchScreen slug="flux_software_varia_o_a_navega_o_conectada_cta_padronizada" title="Flux Software" />;
+  return <><Header /><main><Hero /><ProcessSection /><SolutionsSection /><ResultsSection /><FinalCta /></main><Footer /></>;
 }

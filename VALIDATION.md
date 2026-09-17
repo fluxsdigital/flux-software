@@ -1,15 +1,25 @@
 # Validação
 
-- Conversão: 8 artefatos retornados pelo SDK oficial do Stitch em 17/09/2026
-- Landing pages completas: 1
-- Variações de marca: 7
-- Assets: armazenados localmente em `public/stitch`
-- Material Symbols: fonte local validada em `/fonts/material-symbols-outlined.ttf`
-- Favicon: derivado da marca oficial verde-esmeralda
-- Alterações visuais intencionais: nenhuma
-- ESLint: aprovado
-- Build de produção: aprovado
-- Rotas atuais: HTTP 200
-- Rota removida `/diagnostico`: HTTP 404
+Data da revisão: 17/09/2026.
 
-O Stitch informou 12 telas no resumo do projeto, mas disponibilizou 8 artefatos no download oficial nesta execução. Todos os artefatos retornados foram preservados e publicados. A antiga tela `flux_software_varia_o_a_diagn_stico_interativo_navbar_fixa`, que não existe mais no estado exportável atual, foi removida do app e do conteúdo fonte local.
+## Fonte de verdade
+
+- Projeto Stitch: `Flux Soluções Digitais Landing Page` (`11509714687389976002`)
+- O resumo da API informa 12 telas; o download atual oferece 8 artefatos
+- Somente um artefato é uma landing page: `flux_software_varia_o_a_navega_o_conectada_cta_padronizada`
+- Os outros 7 são estudos/variações isoladas da marca e foram usados apenas como referência visual, sem virarem rotas
+
+## Verificações
+
+- Apenas `/` é uma rota de conteúdo; rotas antigas e variações foram removidas
+- Página reconstruída em componentes React/Next.js, sem iframe ou HTML bruto servido ao navegador
+- Textos, hierarquia, cores, fundos, cards, imagens, diagnóstico e CTAs conferidos contra HTML e screenshot atuais do Stitch
+- Imagens e fontes servidas localmente; nenhuma CDN necessária
+- Ícones implementados como SVGs React e favicon derivado do monograma oficial
+- Animações respeitam `prefers-reduced-motion`
+- Comparação visual executada em desktop (1440 px) e mobile (390 px) com Playwright
+- ESLint aprovado
+- Build de produção aprovado
+- Build contém apenas `/`, `/_not-found`, `/icon.png` e a rota de compatibilidade `/favicon.ico`
+
+O snapshot original consultado foi mantido fora do repositório em diretório temporário e não é publicado com a aplicação.

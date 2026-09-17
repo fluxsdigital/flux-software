@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Flux Software — Automação Inteligente",
-  description: "Tecnologia e automação sob medida para empresas que querem crescer.",
+  title: "Flux Software — Minimalismo Arquitetural & Automação Inteligente",
+  description: "Automação e tecnologia sob medida para empresas que querem crescer.",
   icons: { icon: "/icon.png", shortcut: "/favicon.ico" },
 };
 

@@ -3,7 +3,7 @@ import { Brand } from "./Brand";
 import { Icon } from "./Icons";
 
 export function FinalCta() {
-  return <section className="final-cta" id="conversao"><div className="final-inner"><span className="eyebrow">// VAMOS CONVERSAR SOBRE SUA EMPRESA</span><h2>QUANTO TEMPO SUA EMPRESA AINDA PERDE COM PROCESSOS MANUAIS?</h2><p>Conte para a gente onde sua empresa mais perde tempo. Vamos identificar o que pode ser automatizado e mostrar como a tecnologia pode ajudar sua operação a crescer.</p><div><a className="button" href="https://wa.me/5511999999999">QUERO AUTOMATIZAR MINHA EMPRESA <Icon name="arrow" /></a><a className="button secondary" href="https://wa.me/5511999999999"><Icon name="chat" /> Falar com um Especialista</a></div><small>Converse com nosso time e descubra por onde começar.</small></div></section>;
+  return <section className="final-cta" id="conversao"><div className="final-inner"><span className="eyebrow">// VAMOS CONVERSAR SOBRE SUA EMPRESA</span><h2>QUANTO TEMPO SUA EMPRESA AINDA PERDE COM PROCESSOS MANUAIS?</h2><p>Conte para a gente onde sua empresa mais perde tempo. Vamos identificar o que pode ser automatizado e mostrar como a tecnologia pode ajudar sua operação a crescer.</p><div><a className="button" href="https://wa.me/5538992711406">QUERO AUTOMATIZAR MINHA EMPRESA <Icon name="arrow" /></a><a className="button secondary" href="https://wa.me/5538992711406"><Icon name="chat" /> Falar com um Especialista</a></div><small>Converse com nosso time e descubra por onde começar.</small></div></section>;
 }
 
 export function Footer() {
